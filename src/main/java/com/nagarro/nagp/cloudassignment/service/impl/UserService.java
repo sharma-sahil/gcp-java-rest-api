@@ -31,4 +31,15 @@ public class UserService implements IUserService {
 		return this.userRepo.save(user);
 	}
 
+	@Override
+	public User getUser() {
+		User user = new User();
+		user.setFirstName("First");
+		user.setLastName("Last");
+		user.setCity("City");
+		user.setState("State");
+		user.setCountry("Country");
+		return user;
+	}
+
 }

@@ -15,7 +15,7 @@ import com.nagarro.nagp.cloudassignment.entity.User;
 import com.nagarro.nagp.cloudassignment.service.IUserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
 
 	@Autowired
@@ -40,6 +40,11 @@ public class UserController {
 	@PostMapping()
 	public ResponseEntity<User> addUser(@RequestBody User user) {
 		return new ResponseEntity<>(this.userService.addUser(user), HttpStatus.CREATED);
+	}
+
+	@GetMapping("/test")
+	public ResponseEntity<User> getUser() {
+		return new ResponseEntity<>(this.userService.getUser(), HttpStatus.CREATED);
 	}
 
 }
