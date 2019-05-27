@@ -44,7 +44,7 @@ public class UserController {
 
 	@GetMapping("/test")
 	public ResponseEntity<User> getUser() {
-		return new ResponseEntity<>(this.userService.getUser(), HttpStatus.CREATED);
+		return new ResponseEntity<>(this.userService.getUser(), HttpStatus.OK);
 	}
 
 }
